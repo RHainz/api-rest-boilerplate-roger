@@ -73,8 +73,8 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 
-// userRouter.get("/teste", isAuth, attachCurrentUser, async (req, res) => {
-//   return res.status(200).json(req.currentUser);
-// });
-
+userRouter.get("/teste", isAuth, attachCurrentUser, async (req, res) => {
+  return res.status(200).json(req.auth);
+});
+  
 export { userRouter };
